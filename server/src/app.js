@@ -3,6 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 import { expenseRoutes } from "./routes/expense.routes.js";
 import { errorHandler } from "./middlewares/error.middleware.js";
+import budgetRoutes from "./routes/budget.routes.js";
 
 export const app = express();
 
@@ -24,6 +25,7 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/expenses", expenseRoutes);
+app.use("/api/budgets", budgetRoutes);
 
 // ─── 404 Handler ──────────────────────────────────────────────────────────────
 app.use((req, res) => {
