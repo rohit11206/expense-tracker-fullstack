@@ -9,9 +9,9 @@ The application allows users to track daily expenses, analyze spending habits th
 
 # 🚀 Live Demo
 
-Frontend: https://your-frontend-url.vercel.app
+Frontend: https://expense-tracker-fullstack-five-fawn.vercel.app
 
-Backend API: https://your-backend-url.onrender.com
+Backend API: https://expense-tracker-fullstack-lwk7.onrender.com/api/health
 
 ---
 
@@ -252,21 +252,19 @@ Frontend uses:
 
 ## Dashboard
 
-(Add screenshot here)
+<img width="2865" height="1514" alt="image" src="https://github.com/user-attachments/assets/3275522e-b849-4c17-a1d8-8405a395b8cd" />
+
+
 
 ## Expense List
 
-(Add screenshot here)
+<img width="2850" height="1511" alt="image" src="https://github.com/user-attachments/assets/603bdc5e-a9ff-4ace-9e84-2afee82eb69b" />
+
 
 ## Budget Tracking
 
-(Add screenshot here)
+<img width="2348" height="1505" alt="image" src="https://github.com/user-attachments/assets/84731b22-2a10-45cf-9574-12573baf8e1c" />
 
-## Analytics
-
-(Add screenshot here)
-
----
 
 # 🔮 Future Improvements
 
