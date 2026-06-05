@@ -2,10 +2,11 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { formatCurrency } from "@/utils/currency";
 import { CATEGORY_COLORS, CATEGORY_ICONS } from "@/utils/constants";
-import { AlertTriangle, CheckCircle } from "lucide-react";
+import { AlertTriangle, CheckCircle, Loader2, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export function BudgetCard({ category, budget, spent }) {
+export function BudgetCard({ category, budget, spent, onClear, clearing }) {
   const percentage = budget > 0 ? Math.min((spent / budget) * 100, 100) : 0;
   const isOver = spent > budget && budget > 0;
   const isWarning = percentage >= 80 && !isOver;
@@ -66,9 +67,25 @@ export function BudgetCard({ category, budget, spent }) {
         style={{ "--progress-color": color }}
       />
 
-      {budget === 0 && (
+      {budget === 0 ? (
         <p className="text-xs text-muted-foreground mt-2">No budget set</p>
-      )}
+      ) : onClear ? (
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          className="mt-2 h-7 px-2 text-xs text-muted-foreground"
+          disabled={clearing}
+          onClick={onClear}
+        >
+          {clearing ? (
+            <Loader2 className="h-3 w-3 animate-spin" />
+          ) : (
+            <Trash2 className="h-3 w-3" />
+          )}
+          Clear budget
+        </Button>
+      ) : null}
     </div>
   );
 }

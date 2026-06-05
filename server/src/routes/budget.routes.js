@@ -7,7 +7,7 @@ import {
   deleteBudget,
 } from "../controllers/budget.controller.js";
 
-import validate from "../middlewares/validate.middleware.js";
+import { validate } from "../middlewares/validate.middleware.js";
 
 import {
   createBudgetSchema,
